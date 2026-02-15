@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-space text-steel-light antialiased;
+  }
+  
+  ::selection {
+    @apply bg-electric/30 text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-electric hover:bg-electric-500 text-white font-semibold py-3 px-6 rounded-lg 
+           transition-all duration-300 shadow-glow hover:shadow-glow-lg 
+           transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-electric text-electric hover:bg-electric hover:text-white 
+           font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-orange {
+    @apply bg-orange-alert hover:bg-orange-hover text-white font-semibold py-3 px-6 rounded-lg 
+           transition-all duration-300 transform hover:-translate-y-0.5;
+  }
+  
+  .card {
+    @apply bg-slate-card border border-slate-border rounded-2xl p-6 
+           transition-all duration-300 hover:shadow-card-hover hover:border-electric/50;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4;
+  }
+  
+  .section-subheading {
+    @apply text-lg md:text-xl text-steel max-w-2xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-electric to-cyan-glow bg-clip-text text-transparent;
+  }
+  
+  .glow-border {
+    @apply border border-electric/30 shadow-glow;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-navy-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-electric/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-electric;
+}
