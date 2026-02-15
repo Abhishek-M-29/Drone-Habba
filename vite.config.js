@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Drone-Habba/',
+  // base: '/Drone-Habba/', // Uncomment for GitHub Pages only
 })
