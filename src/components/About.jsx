@@ -7,7 +7,9 @@ import {
   Target,
   Lightbulb,
   GraduationCap,
-  Globe
+  Globe,
+  Ticket,
+  ArrowRight
 } from 'lucide-react';
 
 const stats = [
@@ -98,24 +100,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-space via-transparent to-transparent" />
             </div>
             
-            {/* Floating Card */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-6 -right-6 bg-navy-800 border border-slate-border rounded-xl p-4 shadow-xl"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-electric/20 rounded-lg flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-electric" />
-                </div>
-                <div>
-                  <p className="text-white font-semibold">Open to All</p>
-                  <p className="text-steel text-sm">Diploma / UG / PG Students</p>
-                </div>
-              </div>
-            </motion.div>
+            {/* Floating Card - REMOVED */}
           </motion.div>
 
           {/* Right: Content */}
@@ -160,6 +145,138 @@ const About = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* About Institutions & Department */}
+        <div className="mb-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h3 className="section-heading text-4xl mb-4">Hosted By</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-electric to-orange-500 mx-auto rounded-full" />
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Acharya Institute */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="md:col-span-2 lg:col-span-1 bg-navy-800 border border-slate-border rounded-3xl p-8 hover:border-electric/50 transition-all hover:shadow-2xl hover:shadow-electric/10 group"
+            >
+              <h4 className="text-3xl font-display font-bold text-white mb-6 group-hover:text-electric transition-colors">
+                Acharya Institutes
+              </h4>
+              <p className="text-steel text-lg leading-relaxed mb-6">
+                Nestled on a vast 120-acre campus in Bangalore, Acharya Institutes is a premier educational hub offering 100+ programs across 50 academic streams. With top-notch facilities and a vibrant student community from around the globe, "The Acharya Experience" goes beyond academics to shape future leaders through innovation, cultural fusion, and industry collaborations.
+              </p>
+            </motion.div>
+
+            {/* AIT - Now taking equal prominence */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="md:col-span-2 lg:col-span-1 bg-navy-800 border border-slate-border rounded-3xl p-8 hover:border-electric/50 transition-all hover:shadow-2xl hover:shadow-electric/10 group"
+            >
+              <h4 className="text-2xl font-display font-bold text-white mb-6 group-hover:text-electric transition-colors">
+                Acharya Institute of Technology
+              </h4>
+              <p className="text-steel text-lg leading-relaxed mb-6">
+                Acharya Institute of Technology (AIT) is a cornerstone of technical education, known for its cutting-edge research and comprehensive engineering programs. We empower students with essential skills, fostering critical thinking and creativity to influence the future of technology and engineering.
+              </p>
+            </motion.div>
+
+            {/* Aeronautical Department - Full Width Highlight */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="md:col-span-2 bg-gradient-to-br from-navy-800 to-navy-900 border border-slate-border rounded-3xl p-10 hover:border-electric/50 transition-all hover:shadow-2xl hover:shadow-electric/10 relative overflow-hidden group"
+            >
+              <div className="absolute top-0 right-0 w-64 h-64 bg-electric/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-electric/10 transition-colors" />
+              
+              <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <div className="flex-1">
+                  <h4 className="text-3xl font-display font-bold text-white mb-6 group-hover:text-electric transition-colors">
+                    Department of Aeronautical Engineering
+                  </h4>
+                  <p className="text-steel text-lg leading-relaxed mb-6">
+                    The Aeronautical Engineering Department at AIT is dedicated to excelling in aerospace education and research. Through specific capability enhancement programs and hands-on competitions like Drone Habba, we nurture the next generation of aviation experts and drone technologists.
+                  </p>
+                  <p className="text-steel text-lg leading-relaxed">
+                    With state-of-the-art laboratories, wind tunnels, and flight simulation facilities, we bridge the gap between theoretical knowledge and practical application.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* The Big O Section */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative bg-black rounded-3xl border border-white/10 overflow-hidden"
+          >
+            {/* Background Effects */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-electric/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-electric/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+
+            <div className="relative z-10 p-8 md:p-12 lg:p-16">
+              <div className="max-w-4xl mx-auto text-center mb-12">
+                <span className="text-electric font-bold tracking-wider uppercase mb-4 block">Organized By</span>
+                <h3 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                  The <span className="text-electric">Big O</span>
+                </h3>
+                <p className="text-xl text-steel leading-relaxed">
+                  The Big O is Acharya's premier Tech Club, established in 2023. What started with just a handful of members 
+                  has grown into a thriving community of over 200 passionate students committed to continuous learning 
+                  and technological excellence.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 text-center">
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                  <div className="text-4xl font-bold text-white mb-2">700+</div>
+                  <div className="text-electric font-medium">Registrations</div>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                  <div className="text-4xl font-bold text-white mb-2">200+</div>
+                  <div className="text-electric font-medium">Active Members</div>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors">
+                  <div className="text-4xl font-bold text-white mb-2">30k+</div>
+                  <div className="text-electric font-medium">Social Engagement</div>
+                </div>
+              </div>
+
+              <div className="mt-12 text-center">
+                <p className="text-steel max-w-3xl mx-auto mb-8">
+                  We regularly host hackathons, workshops, and interactive sessions to help members 
+                  strengthen their technical skills, explore emerging technologies, and build their 
+                  professional networks.
+                </p>
+                <a 
+                  href="https://www.instagram.com/thisisthebigo/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-electric text-white rounded-full font-semibold hover:bg-electric-light transition-all transform hover:scale-105"
+                >
+                  Follow Us on Instagram
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -18,13 +18,12 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-electric hover:bg-electric-500 text-white font-semibold py-3 px-6 rounded-lg 
-           transition-all duration-300 shadow-glow hover:shadow-glow-lg 
-           transform hover:-translate-y-0.5 active:translate-y-0;
+    @apply bg-white text-black hover:bg-gray-200 font-semibold py-3 px-6 rounded-lg 
+           transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
   }
   
   .btn-secondary {
-    @apply border-2 border-electric text-electric hover:bg-electric hover:text-white 
+    @apply border border-slate-border text-white hover:border-white hover:bg-white/5
            font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
   
@@ -34,20 +33,20 @@
   }
   
   .card {
-    @apply bg-slate-card border border-slate-border rounded-2xl p-6 
-           transition-all duration-300 hover:shadow-card-hover hover:border-electric/50;
+    @apply bg-space-200 border border-slate-border rounded-xl p-6 
+           transition-all duration-300 hover:border-electric/50;
   }
   
   .section-heading {
-    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-4;
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 tracking-tight;
   }
   
   .section-subheading {
-    @apply text-lg md:text-xl text-steel max-w-2xl mx-auto;
+    @apply text-lg md:text-xl text-steel max-w-2xl mx-auto font-light leading-relaxed;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-electric to-cyan-glow bg-clip-text text-transparent;
+    @apply text-white; /* Removed generic gradient, keeping it clean white or specific highlight */
   }
   
   .glow-border {

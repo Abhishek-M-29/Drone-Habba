@@ -30,7 +30,7 @@ const EventCard = ({ event, onClick }) => {
 
       {/* Content */}
       <div className="flex items-start gap-4">
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${event.color} flex items-center justify-center flex-shrink-0 shadow-lg`}>
+        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${event.color} flex items-center justify-center flex-shrink-0`}>
           <Icon className="w-6 h-6 text-white" />
         </div>
         <div className="flex-1 min-w-0">

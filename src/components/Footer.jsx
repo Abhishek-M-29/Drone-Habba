@@ -191,8 +191,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-steel text-sm text-center sm:text-left">
-              © 2026 Drone Habba. All rights reserved. Made with{' '}
-              <Heart className="w-4 h-4 inline text-red-500 fill-red-500" /> in India
+              © 2026 Drone Habba. Credits to <span className="text-electric">The Big O club</span> of Acharya Institute of Technology.
             </p>
             <div className="flex items-center gap-6 text-sm text-steel">
               <a href="#" className="hover:text-electric transition-colors">Privacy Policy</a>

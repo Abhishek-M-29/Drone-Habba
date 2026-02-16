@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Eligibility from './components/Eligibility';
 import Events from './components/Events';
 import Timeline from './components/Timeline';
 import Registration from './components/Registration';
@@ -18,6 +19,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Eligibility />
         <Events />
         <Timeline />
         <Registration />

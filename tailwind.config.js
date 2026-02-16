@@ -7,45 +7,44 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Colors
+        // Primary Colors - Deep Tech Blue
         navy: {
-          900: '#0A1628',
-          800: '#0F1E32',
-          700: '#152B45',
-          600: '#1E3A5F',
+          900: '#020408', // Ultra Dark
+          800: '#0B1221', // Card BG
+          700: '#162032', // Hover BG
+          600: '#1F2E48', // Border/Divider
         },
-        // Accent Colors
+        // Accent Colors - Acharya Tech Habba Theme
         electric: {
-          DEFAULT: '#00A3FF',
-          50: '#E6F6FF',
-          100: '#BAE6FF',
-          200: '#7DD3FF',
-          300: '#38BFFF',
-          400: '#00A3FF',
-          500: '#0088E6',
-          600: '#006BB3',
+          DEFAULT: '#0070f3', // Tech Blue (Vercel-like / Modern Web)
+          50: '#F0F7FF',
+          100: '#E0F0FF',
+          200: '#BAE0FF',
+          300: '#7CC4FF',
+          400: '#36A8FF',
+          500: '#0070f3', // Main Brand Color 
+          600: '#0058C6',
+          700: '#003E8A',
         },
-        cyan: {
-          glow: '#00D4FF',
-        },
+        // Acharya Brand Orange
         orange: {
-          alert: '#FF6B35',
-          hover: '#FF8255',
+          alert: '#F36F21', // Acharya Orange
+          hover: '#D95D15',
         },
-        // Background
+        // Background - Pure & Deep
         space: {
-          DEFAULT: '#030712',
-          100: '#0A0F1A',
-          200: '#111827',
+          DEFAULT: '#000000', // Deep Black
+          100: '#0A0A0A',     // Soft Black
+          200: '#111111',     // Card Background
         },
         // Neutrals
         slate: {
-          card: '#1E293B',
-          border: '#334155',
+          card: '#0A0A0A',    // Matching space-100
+          border: '#333333',  // Subtle borders
         },
         steel: {
-          light: '#E2E8F0',
-          DEFAULT: '#94A3B8',
+          light: '#EDEDED',   // High contrast text
+          DEFAULT: '#888888', // Muted text
         },
       },
       fontFamily: {

@@ -33,7 +33,7 @@ export const timelineData = [
   },
   {
     id: 5,
-    date: "April 1, 2026",
+    date: "March 26, 2026",
     title: "Technical Briefing",
     description: "Online technical briefing for all registered teams. Rules clarification session.",
     status: "upcoming",
@@ -41,7 +41,7 @@ export const timelineData = [
   },
   {
     id: 6,
-    date: "April 10, 2026",
+    date: "March 27, 2026",
     title: "Day 1 - Drone Habba",
     description: "Inauguration, Drone Competition (Civil Categories), Poster Setup & Judging.",
     status: "upcoming",
@@ -55,7 +55,7 @@ export const timelineData = [
   },
   {
     id: 7,
-    date: "April 11, 2026",
+    date: "March 28, 2026",
     title: "Day 2 - Drone Habba",
     description: "Defense UAV Missions, Aircraft Investigation, Egg Parachute Challenge.",
     status: "upcoming",
@@ -69,7 +69,7 @@ export const timelineData = [
   },
   {
     id: 8,
-    date: "April 12, 2026",
+    date: "March 29, 2026",
     title: "Day 3 - Finals & Awards",
     description: "Aircraft Design Presentations, Grand Finale Drone Challenge, Award Ceremony.",
     status: "upcoming",
