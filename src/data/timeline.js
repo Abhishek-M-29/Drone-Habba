@@ -42,7 +42,7 @@ export const timelineData = [
   {
     id: 6,
     date: "March 27, 2026",
-    title: "Day 1 - Drone Habba",
+    title: "Day 1 - Xcelerate 2026",
     description: "Inauguration, Drone Competition (Civil Categories), Poster Setup & Judging.",
     status: "upcoming",
     icon: "flag",
@@ -56,7 +56,7 @@ export const timelineData = [
   {
     id: 7,
     date: "March 28, 2026",
-    title: "Day 2 - Drone Habba",
+    title: "Day 2 - Xcelerate 2026",
     description: "Defense UAV Missions, Aircraft Investigation, Egg Parachute Challenge.",
     status: "upcoming",
     icon: "trophy",
@@ -84,3 +84,4 @@ export const timelineData = [
 ];
 
 export default timelineData;
+

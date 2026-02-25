@@ -1,7 +1,7 @@
 export const faqData = [
   {
     id: 1,
-    question: "Who can participate in Drone Habba 2026?",
+    question: "Who can participate in Xcelerate 2026?",
     answer: "The event is open to all Diploma, Undergraduate (UG), and Postgraduate (PG) students from recognized institutions across India. Valid institutional ID is mandatory for registration."
   },
   {
@@ -62,3 +62,4 @@ export const faqData = [
 ];
 
 export default faqData;
+

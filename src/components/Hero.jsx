@@ -146,7 +146,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6"
           >
             <span className="block">Welcome to</span>
-            <span className="gradient-text">Drone Habba</span>
+            <span className="gradient-text">Xcelerate 2026</span>
           </motion.h1>
 
           {/* Tagline */}
@@ -243,3 +243,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

@@ -82,9 +82,8 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-xl text-white">
-                Drone <span className="text-electric">Habba</span>
+                Xcelerate <span className="text-electric">2026</span>
               </span>
-              <span className="text-xs text-steel font-medium tracking-wider">2026</span>
             </div>
           </motion.a>
 

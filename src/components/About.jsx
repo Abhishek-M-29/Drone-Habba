@@ -73,7 +73,7 @@ const About = () => {
         >
           <span className="text-electric text-sm font-semibold uppercase tracking-wider">About the Event</span>
           <h2 className="section-heading mt-2">
-            What is <span className="gradient-text">Drone Habba</span>?
+            What is <span className="gradient-text">Xcelerate 2026</span>?
           </h2>
           <p className="section-subheading">
             A premier aerospace and aviation technology competition designed for engineering 
@@ -114,14 +114,14 @@ const About = () => {
               Empowering Future Aerospace Engineers
             </h3>
             <p className="text-steel mb-6 leading-relaxed">
-              Drone Habba 2026 brings together the brightest engineering minds from across India 
+              Xcelerate 2026 brings together the brightest engineering minds from across India 
               to compete in challenging aerospace competitions. From high-speed drone racing to 
               complex aircraft accident investigations, participants gain hands-on experience 
               with real-world aviation challenges.
             </p>
             <p className="text-steel mb-8 leading-relaxed">
               Whether you're passionate about UAV technology, aircraft design, or aerospace 
-              innovation, Drone Habba offers a platform to showcase your skills, learn from 
+              innovation, Xcelerate 2026 offers a platform to showcase your skills, learn from 
               industry experts, and connect with like-minded enthusiasts.
             </p>
 
@@ -210,7 +210,7 @@ const About = () => {
                     Department of Aeronautical Engineering
                   </h4>
                   <p className="text-steel text-lg leading-relaxed mb-6">
-                    The Aeronautical Engineering Department at AIT is dedicated to excelling in aerospace education and research. Through specific capability enhancement programs and hands-on competitions like Drone Habba, we nurture the next generation of aviation experts and drone technologists.
+                    The Aeronautical Engineering Department at AIT is dedicated to excelling in aerospace education and research. Through specific capability enhancement programs and hands-on competitions like Xcelerate 2026, we nurture the next generation of aviation experts and drone technologists.
                   </p>
                   <p className="text-steel text-lg leading-relaxed">
                     With state-of-the-art laboratories, wind tunnels, and flight simulation facilities, we bridge the gap between theoretical knowledge and practical application.
@@ -309,3 +309,4 @@ const About = () => {
 };
 
 export default About;
+

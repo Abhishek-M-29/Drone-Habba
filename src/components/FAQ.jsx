@@ -77,7 +77,7 @@ const FAQ = () => {
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
           <p className="section-subheading">
-            Find answers to common questions about Drone Habba 2026.
+            Find answers to common questions about Xcelerate 2026.
           </p>
         </motion.div>
 
@@ -129,7 +129,7 @@ const FAQ = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <motion.a
-                    href="https://wa.me/919876543210?text=Hi%2C%20I%20have%20a%20question%20about%20Drone%20Habba%202026"
+                    href="https://wa.me/919876543210?text=Hi%2C%20I%20have%20a%20question%20about%20Xcelerate%202026"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -142,7 +142,7 @@ const FAQ = () => {
                     WhatsApp Us
                   </motion.a>
                   <motion.a
-                    href="mailto:dronehabba@college.edu"
+                    href="mailto:xcelerate@college.edu"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="btn-secondary text-sm py-2 px-4"
@@ -160,3 +160,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+

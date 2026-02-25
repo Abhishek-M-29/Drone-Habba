@@ -46,7 +46,7 @@ const Eligibility = () => {
                 className="text-steel text-lg mb-8 leading-relaxed"
               >
                 Whether you're pursuing a diploma, undergraduate, or postgraduate degree, 
-                Drone Habba invites you to showcase your innovation and engineering skills.
+                Xcelerate 2026 invites you to showcase your innovation and engineering skills.
               </motion.p>
 
               <div className="space-y-4">
@@ -118,3 +118,4 @@ const Eligibility = () => {
 };
 
 export default Eligibility;
+

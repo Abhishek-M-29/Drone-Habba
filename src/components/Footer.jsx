@@ -69,9 +69,8 @@ const Footer = () => {
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-white">
-                  Drone <span className="text-electric">Habba</span>
+                  Xcelerate <span className="text-electric">2026</span>
                 </span>
-                <span className="text-xs text-steel block">2026</span>
               </div>
             </a>
             <p className="text-steel text-sm leading-relaxed mb-6">
@@ -140,11 +139,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a 
-                  href="mailto:dronehabba@college.edu"
+                  href="mailto:xcelerate@college.edu"
                   className="flex items-start gap-3 text-steel hover:text-electric transition-colors text-sm group"
                 >
                   <Mail className="w-5 h-5 mt-0.5 flex-shrink-0 group-hover:text-electric" />
-                  <span>dronehabba@college.edu</span>
+                  <span>xcelerate@college.edu</span>
                 </a>
               </li>
               <li>
@@ -170,7 +169,7 @@ const Footer = () => {
 
             {/* WhatsApp Quick Contact */}
             <motion.a
-              href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20Drone%20Habba%202026"
+              href="https://wa.me/919876543210?text=Hi%2C%20I%27m%20interested%20in%20Xcelerate%202026"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -191,7 +190,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-steel text-sm text-center sm:text-left">
-              © 2026 Drone Habba. Credits to <span className="text-electric">The Big O club</span> of Acharya Institute of Technology.
+              © 2026 Xcelerate 2026. Credits to <span className="text-electric">The Big O club</span> of Acharya Institute of Technology.
             </p>
             <div className="flex items-center gap-6 text-sm text-steel">
               <a href="#" className="hover:text-electric transition-colors">Privacy Policy</a>
@@ -216,3 +215,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

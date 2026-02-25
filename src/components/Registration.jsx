@@ -181,7 +181,7 @@ const Registration = () => {
               Registration Successful! 🎉
             </h2>
             <p className="text-steel mb-6">
-              Thank you for registering for Drone Habba 2026. We've sent a confirmation email to{' '}
+              Thank you for registering for Xcelerate 2026. We've sent a confirmation email to{' '}
               <span className="text-electric">{formData.email}</span>
             </p>
             <div className="bg-slate-card rounded-lg p-4 mb-6 text-left">
@@ -230,7 +230,7 @@ const Registration = () => {
             <span className="gradient-text">Register</span> Now
           </h2>
           <p className="section-subheading">
-            Secure your spot at Drone Habba 2026. Fill in your details and select the events you want to participate in.
+            Secure your spot at Xcelerate 2026. Fill in your details and select the events you want to participate in.
           </p>
         </motion.div>
 
@@ -500,3 +500,4 @@ const Registration = () => {
 };
 
 export default Registration;
+

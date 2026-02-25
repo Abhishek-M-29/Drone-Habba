@@ -7,7 +7,6 @@ import Timeline from './components/Timeline';
 import Registration from './components/Registration';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
 
 function App() {
   return (
@@ -29,8 +28,6 @@ function App() {
       {/* Footer */}
       <Footer />
       
-      {/* Floating WhatsApp Button */}
-      <WhatsAppButton />
     </div>
   );
 }
