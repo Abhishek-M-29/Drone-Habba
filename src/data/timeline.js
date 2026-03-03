@@ -1,85 +1,57 @@
 export const timelineData = [
   {
     id: 1,
-    date: "March 1, 2026",
-    title: "Registration Opens",
-    description: "Online registration portal goes live. Early bird discounts available.",
+    date: "March 27, 2026",
+    time: "9:00 AM",
+    title: "Inauguration Ceremony",
+    description: "Welcome address and official opening of Xcelerate 2026.",
     status: "upcoming",
-    icon: "calendar"
+    icon: "flag"
   },
   {
     id: 2,
-    date: "March 15, 2026",
-    title: "Abstract Submission Deadline",
-    description: "Last date for Poster Presentation abstract submissions (250-300 words).",
+    date: "March 27, 2026",
+    time: "10:00 AM",
+    title: "Drone Competition",
+    description: "Autonomous drone flying with geofencing and waypoints. Max weight 2kg including payload.",
     status: "upcoming",
-    icon: "file"
+    icon: "trophy"
   },
   {
     id: 3,
-    date: "March 20, 2026",
-    title: "Abstract Review Results",
-    description: "Technical Committee announces selected abstracts for Poster Presentation.",
-    status: "upcoming",
-    icon: "check"
-  },
-  {
-    id: 4,
-    date: "March 25, 2026",
-    title: "Registration Closes",
-    description: "Final deadline for all event registrations. No late entries accepted.",
+    date: "March 27, 2026",
+    time: "11:30 AM",
+    title: "Parachute Challenge",
+    description: "Materials provided on-site. Come with an idea and build within given time.",
     status: "upcoming",
     icon: "clock"
   },
   {
-    id: 5,
-    date: "March 26, 2026",
-    title: "Technical Briefing",
-    description: "Online technical briefing for all registered teams. Rules clarification session.",
+    id: 4,
+    date: "March 27, 2026",
+    time: "2:00 PM",
+    title: "Aircraft Investigation",
+    description: "Analyze a random aircraft accident video and investigate the cause.",
     status: "upcoming",
-    icon: "video"
+    icon: "file"
+  },
+  {
+    id: 5,
+    date: "March 27, 2026",
+    time: "3:30 PM",
+    title: "Design Parameters",
+    description: "Design an aircraft based on given parameters for any given objective.",
+    status: "upcoming",
+    icon: "check"
   },
   {
     id: 6,
     date: "March 27, 2026",
-    title: "Day 1 - Xcelerate 2026",
-    description: "Inauguration, Drone Competition (Civil Categories), Poster Setup & Judging.",
+    time: "5:00 PM",
+    title: "Award Ceremony & Closing",
+    description: "Results announcement, prize distribution, and closing ceremony.",
     status: "upcoming",
-    icon: "flag",
-    events: [
-      "9:00 AM - Inauguration Ceremony",
-      "10:00 AM - Drone Racing Heats",
-      "2:00 PM - Payload Delivery Challenge",
-      "4:00 PM - Poster Presentation (Session 1)"
-    ]
-  },
-  {
-    id: 7,
-    date: "March 28, 2026",
-    title: "Day 2 - Xcelerate 2026",
-    description: "Defense UAV Missions, Aircraft Investigation, Egg Parachute Challenge.",
-    status: "upcoming",
-    icon: "trophy",
-    events: [
-      "9:00 AM - Autonomous Mission Finals",
-      "11:00 AM - Defense Category Simulations",
-      "2:00 PM - Accident Investigation Presentations",
-      "4:00 PM - Egg Parachute Drops"
-    ]
-  },
-  {
-    id: 8,
-    date: "March 29, 2026",
-    title: "Day 3 - Finals & Awards",
-    description: "Aircraft Design Presentations, Grand Finale Drone Challenge, Award Ceremony.",
-    status: "upcoming",
-    icon: "award",
-    events: [
-      "9:00 AM - Aircraft Design Presentations",
-      "12:00 PM - Grand Finale Drone Challenge",
-      "3:00 PM - Results Compilation",
-      "5:00 PM - Award Ceremony & Closing"
-    ]
+    icon: "award"
   }
 ];
 

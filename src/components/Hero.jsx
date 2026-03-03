@@ -19,9 +19,9 @@ const Hero = () => {
     seconds: 0
   });
 
-  // Countdown to April 10, 2026
+  // Countdown to March 27, 2026
   useEffect(() => {
-    const targetDate = new Date('2026-04-10T09:00:00').getTime();
+    const targetDate = new Date('2026-03-27T09:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -54,43 +54,29 @@ const Hero = () => {
 
   const CountdownBlock = ({ value, label }) => (
     <div className="flex flex-col items-center">
-      <motion.div
-        key={value}
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        className="bg-navy-800/80 backdrop-blur-sm border border-slate-border rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[80px]"
-      >
-        <span className="text-2xl sm:text-4xl font-display font-bold text-white">
+      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[80px]">
+        <span className="block text-2xl sm:text-4xl font-display font-bold text-white text-center">
           {String(value).padStart(2, '0')}
         </span>
-      </motion.div>
-      <span className="text-xs sm:text-sm text-steel mt-2 uppercase tracking-wider">{label}</span>
+      </div>
+      <span className="text-xs sm:text-sm text-neutral-500 mt-2 uppercase tracking-wider">{label}</span>
     </div>
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute inset-0 bg-glow-gradient opacity-50" />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-black">
+      {/* Simple Dark Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black" />
       
-      {/* Animated Grid Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 163, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 163, 255, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}
-        />
-      </div>
+      {/* Subtle Vignette Effect */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
 
-      {/* Floating Drone Animation */}
+      {/* Static Accent - Subtle top line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent" />
+
+      {/* Removed Floating Drone Animation */}
       <motion.div
-        className="absolute right-10 top-1/4 hidden lg:block"
+        className="absolute right-10 top-1/4 hidden"
         animate={{ 
           y: [0, -30, 0],
           rotate: [0, 5, -5, 0]
@@ -107,22 +93,11 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Floating Elements */}
-      <motion.div
-        className="absolute left-20 bottom-1/3 hidden lg:block"
-        animate={{ y: [0, 20, 0], x: [0, 10, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <Target className="w-16 h-16 text-cyan-glow/20" />
-      </motion.div>
-      
-      <motion.div
-        className="absolute right-1/4 bottom-1/4 hidden lg:block"
-        animate={{ y: [0, -15, 0], rotate: [0, 360] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-      >
-        <Sparkles className="w-8 h-8 text-orange-alert/30" />
-      </motion.div>
+      {/* Floating Elements - Hidden for cleaner look */}
+      <div className="hidden">
+        <Target className="w-16 h-16 text-neutral-800" />
+        <Sparkles className="w-8 h-8 text-neutral-800" />
+      </div>
 
       {/* Main Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
@@ -132,10 +107,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-electric/10 border border-electric/30 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-full px-4 py-2 mb-6"
           >
-            <Rocket className="w-4 h-4 text-electric" />
-            <span className="text-sm font-medium text-electric">Aerospace & Aviation Event 2026</span>
+            <Rocket className="w-4 h-4 text-white" />
+            <span className="text-sm font-medium text-neutral-300">Aerospace & Aviation Event 2026</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -154,7 +129,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg sm:text-xl text-steel max-w-2xl mx-auto lg:mx-0 mb-8"
+            className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto lg:mx-0 mb-8"
           >
             India's Premier Student Aerospace Competition featuring Drone Racing, 
             Aircraft Investigation, Engineering Challenges & Innovation Showcases.
@@ -167,17 +142,17 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 mb-10"
           >
-            <div className="flex items-center gap-2 text-steel-light">
-              <Calendar className="w-5 h-5 text-electric" />
-              <span className="font-medium">March 27-29, 2026</span>
+            <div className="flex items-center gap-2 text-neutral-300">
+              <Calendar className="w-5 h-5 text-neutral-500" />
+              <span className="font-medium">March 27, 2026</span>
             </div>
-            <div className="flex items-center gap-2 text-steel-light">
-              <MapPin className="w-5 h-5 text-electric" />
+            <div className="flex items-center gap-2 text-neutral-300">
+              <MapPin className="w-5 h-5 text-neutral-500" />
               <span className="font-medium">Bangalore, India</span>
             </div>
-            <div className="flex items-center gap-2 text-steel-light">
-              <Users className="w-5 h-5 text-electric" />
-              <span className="font-medium">5 Events</span>
+            <div className="flex items-center gap-2 text-neutral-300">
+              <Users className="w-5 h-5 text-neutral-500" />
+              <span className="font-medium">4 Events</span>
             </div>
           </motion.div>
 
@@ -213,7 +188,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="text-steel text-sm mb-4 uppercase tracking-wider">Event Starts In</p>
+            <p className="text-neutral-500 text-sm mb-4 uppercase tracking-wider">Event Starts In</p>
             <div className="flex justify-center lg:justify-start gap-3 sm:gap-4">
               <CountdownBlock value={timeLeft.days} label="Days" />
               <CountdownBlock value={timeLeft.hours} label="Hours" />
@@ -232,7 +207,7 @@ const Hero = () => {
       >
         <button
           onClick={() => scrollToSection('#about')}
-          className="flex flex-col items-center gap-2 text-steel hover:text-electric transition-colors"
+          className="flex flex-col items-center gap-2 text-neutral-600 hover:text-neutral-400 transition-colors"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-5 h-5" />

@@ -14,7 +14,7 @@ import {
 
 const stats = [
   { icon: Users, value: '500+', label: 'Expected Participants' },
-  { icon: Award, value: '5', label: 'Competition Events' },
+  { icon: Award, value: '4', label: 'Competition Events' },
   { icon: GraduationCap, value: '100+', label: 'Colleges' },
   { icon: Globe, value: '₹1L+', label: 'Prize Pool' },
 ];

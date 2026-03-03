@@ -53,9 +53,9 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(135deg, #0A1628 0%, #1E3A5F 50%, #00A3FF 100%)',
-        'card-gradient': 'linear-gradient(180deg, rgba(0,163,255,0.1) 0%, rgba(0,212,255,0.05) 100%)',
-        'glow-gradient': 'radial-gradient(ellipse at center, rgba(0,163,255,0.15) 0%, transparent 70%)',
+        'hero-gradient': 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
+        'card-gradient': 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)',
+        'glow-gradient': 'radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%)',
       },
       boxShadow: {
         'glow': '0 0 20px rgba(0, 163, 255, 0.3)',

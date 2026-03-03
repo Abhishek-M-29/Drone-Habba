@@ -289,7 +289,7 @@ const Events = () => {
         >
           <span className="text-electric text-sm font-semibold uppercase tracking-wider">Competitions</span>
           <h2 className="section-heading mt-2">
-            <span className="gradient-text">5 Exciting</span> Events
+            <span className="gradient-text">4 Exciting</span> Events
           </h2>
           <p className="section-subheading">
             From high-speed drone racing to complex engineering challenges, 
@@ -298,7 +298,7 @@ const Events = () => {
         </motion.div>
 
         {/* Events Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
           {events.map((event, index) => (
             <motion.div
               key={event.id}

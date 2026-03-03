@@ -41,7 +41,10 @@ const TimelineItem = ({ item, index, isLast }) => {
             <div className="w-10 h-10 rounded-lg bg-electric/20 flex items-center justify-center">
               <Icon className="w-5 h-5 text-electric" />
             </div>
-            <span className="text-electric text-sm font-semibold">{item.date}</span>
+            <div className={`flex flex-col ${isLeft ? 'md:items-end' : 'md:items-start'}`}>
+              <span className="text-electric text-sm font-semibold">{item.time}</span>
+              <span className="text-steel text-xs">{item.date}</span>
+            </div>
           </div>
           <h3 className="text-lg font-display font-bold text-white mb-2">{item.title}</h3>
           <p className="text-steel text-sm">{item.description}</p>
@@ -125,7 +128,10 @@ const Timeline = () => {
             >
               <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-electric shadow-glow" />
               <div className="card">
-                <span className="text-electric text-sm font-semibold">{item.date}</span>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-electric text-sm font-semibold">{item.time}</span>
+                  <span className="text-steel text-xs">• {item.date}</span>
+                </div>
                 <h3 className="text-lg font-display font-bold text-white mt-1 mb-2">{item.title}</h3>
                 <p className="text-steel text-sm">{item.description}</p>
                 {item.events && (
