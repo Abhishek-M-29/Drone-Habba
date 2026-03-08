@@ -1,57 +1,57 @@
 export const timelineData = [
   {
     id: 1,
-    date: "March 27, 2026",
-    time: "9:00 AM",
-    title: "Inauguration Ceremony",
-    description: "Welcome address and official opening of Xcelerate 2026.",
-    status: "upcoming",
-    icon: "flag"
+    phase: "Phase 1",
+    title: "Inauguration",
+    description: "Welcome address, lamp lighting, and official opening of AeroXcelerate 2026.",
+    icon: "flag",
+    highlight: false,
   },
   {
     id: 2,
-    date: "March 27, 2026",
-    time: "10:00 AM",
-    title: "Drone Competition",
-    description: "Autonomous drone flying with geofencing and waypoints. Max weight 2kg including payload.",
-    status: "upcoming",
-    icon: "trophy"
+    phase: "Phase 2",
+    title: "Competitions",
+    description: "All 5 events run concurrently across different venues on campus.",
+    icon: "trophy",
+    highlight: true,
+    events: [
+      "Drone Flying Competition",
+      "Egg Parachute Competition",
+      "Aircraft Accident Investigation",
+      "Aircraft Designing & Sketching",
+      "Aircraft Poster Presentation"
+    ]
   },
   {
     id: 3,
-    date: "March 27, 2026",
-    time: "11:30 AM",
-    title: "Parachute Challenge",
-    description: "Materials provided on-site. Come with an idea and build within given time.",
-    status: "upcoming",
-    icon: "clock"
+    phase: "Break",
+    title: "Lunch & Refreshments",
+    description: "Lunch and refreshments will be provided to all participants during the break.",
+    icon: "clock",
+    highlight: false,
   },
   {
     id: 4,
-    date: "March 27, 2026",
-    time: "2:00 PM",
-    title: "Aircraft Investigation",
-    description: "Analyze a random aircraft accident video and investigate the cause.",
-    status: "upcoming",
-    icon: "file"
+    phase: "Phase 3",
+    title: "Competitions Continue",
+    description: "Events resume after lunch across all venues.",
+    icon: "trophy",
+    highlight: true,
+    events: [
+      "Drone Flying Competition",
+      "Egg Parachute Competition",
+      "Aircraft Accident Investigation",
+      "Aircraft Designing & Sketching",
+      "Aircraft Poster Presentation"
+    ]
   },
   {
     id: 5,
-    date: "March 27, 2026",
-    time: "3:30 PM",
-    title: "Design Parameters",
-    description: "Design an aircraft based on given parameters for any given objective.",
-    status: "upcoming",
-    icon: "check"
-  },
-  {
-    id: 6,
-    date: "March 27, 2026",
-    time: "5:00 PM",
-    title: "Award Ceremony & Closing",
-    description: "Results announcement, prize distribution, and closing ceremony.",
-    status: "upcoming",
-    icon: "award"
+    phase: "Finale",
+    title: "Valedictory",
+    description: "Results announcement, prize distribution, certificates, trophies, and closing ceremony.",
+    icon: "award",
+    highlight: false,
   }
 ];
 

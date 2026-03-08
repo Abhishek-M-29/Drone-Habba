@@ -45,16 +45,15 @@ const Eligibility = () => {
                 transition={{ delay: 0.2 }}
                 className="text-steel text-lg mb-8 leading-relaxed"
               >
-                Whether you're pursuing a diploma, undergraduate, or postgraduate degree, 
-                Xcelerate 2026 invites you to showcase your innovation and engineering skills.
+                AeroXcelerate 2026 is open to students from all colleges and universities. 
+                Whether you participate individually or in teams, there's a challenge waiting for you.
               </motion.p>
 
               <div className="space-y-4">
                 {[
-                  "Diploma Students (Polytechnic)",
-                  "Undergraduate Students (BE/B.Tech)",
-                  "Postgraduate Students (ME/M.Tech)",
-                  "Ph.D. Scholars & Researchers"
+                  "Open to students from all colleges and universities",
+                  "Individual or team participation (depending on event)",
+                  "Cross-college teams are allowed"
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
@@ -96,7 +95,7 @@ const Eligibility = () => {
                       <Users className="w-6 h-6 text-orange-alert" />
                     </div>
                     <div className="text-2xl font-bold text-white mb-1">Teams</div>
-                    <div className="text-xs text-steel uppercase tracking-wider">3-6 Members</div>
+                    <div className="text-xs text-steel uppercase tracking-wider">Varies by Event</div>
                   </div>
                   <div className="col-span-2 bg-gradient-to-r from-electric/10 to-transparent rounded-xl p-6 flex items-center gap-4 border border-electric/20">
                     <div className="w-12 h-12 bg-electric rounded-lg flex items-center justify-center flex-shrink-0 shadow-lg shadow-electric/20">

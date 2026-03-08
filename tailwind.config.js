@@ -7,44 +7,52 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Primary Colors - Deep Tech Blue
+        // Primary Colors - Deep Aerospace Blue
         navy: {
-          900: '#020408', // Ultra Dark
-          800: '#0B1221', // Card BG
-          700: '#162032', // Hover BG
-          600: '#1F2E48', // Border/Divider
+          900: '#020408',
+          800: '#0B1221',
+          700: '#162032',
+          600: '#1F2E48',
         },
-        // Accent Colors - Acharya Tech Habba Theme
+        // Accent Colors - Aerospace Theme
         electric: {
-          DEFAULT: '#0070f3', // Tech Blue (Vercel-like / Modern Web)
+          DEFAULT: '#0070f3',
           50: '#F0F7FF',
           100: '#E0F0FF',
           200: '#BAE0FF',
           300: '#7CC4FF',
           400: '#36A8FF',
-          500: '#0070f3', // Main Brand Color 
+          500: '#0070f3',
           600: '#0058C6',
           700: '#003E8A',
+          light: '#36A8FF',
         },
         // Acharya Brand Orange
         orange: {
-          alert: '#F36F21', // Acharya Orange
+          alert: '#F36F21',
           hover: '#D95D15',
         },
-        // Background - Pure & Deep
+        // Aerospace gradient palette
+        aero: {
+          deep: '#020B18',
+          blue: '#0B2447',
+          cyan: '#0E4D64',
+          teal: '#14b8a6',
+        },
+        // Background - Deep Space
         space: {
-          DEFAULT: '#000000', // Deep Black
-          100: '#0A0A0A',     // Soft Black
-          200: '#111111',     // Card Background
+          DEFAULT: '#020B18',
+          100: '#071226',
+          200: '#0B1A30',
         },
         // Neutrals
         slate: {
-          card: '#0A0A0A',    // Matching space-100
-          border: '#333333',  // Subtle borders
+          card: '#0B1A30',
+          border: '#1E3A5F',
         },
         steel: {
-          light: '#EDEDED',   // High contrast text
-          DEFAULT: '#888888', // Muted text
+          light: '#EDEDED',
+          DEFAULT: '#94A3B8',
         },
       },
       fontFamily: {
@@ -53,15 +61,15 @@ export default {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       backgroundImage: {
-        'hero-gradient': 'linear-gradient(180deg, #000000 0%, #0a0a0a 100%)',
-        'card-gradient': 'linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.01) 100%)',
-        'glow-gradient': 'radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%)',
+        'hero-gradient': 'linear-gradient(135deg, #020B18 0%, #0B2447 40%, #0E4D64 100%)',
+        'card-gradient': 'linear-gradient(180deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+        'glow-gradient': 'radial-gradient(ellipse at center, rgba(14,116,144,0.08) 0%, transparent 70%)',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(0, 163, 255, 0.3)',
-        'glow-lg': '0 0 40px rgba(0, 163, 255, 0.4)',
-        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2)',
-        'card-hover': '0 20px 40px -15px rgba(0, 163, 255, 0.3)',
+        'glow': '0 0 20px rgba(14, 165, 233, 0.3)',
+        'glow-lg': '0 0 40px rgba(14, 165, 233, 0.4)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3)',
+        'card-hover': '0 20px 40px -15px rgba(14, 165, 233, 0.3)',
       },
       animation: {
         'float': 'float 6s ease-in-out infinite',

@@ -7,7 +7,9 @@ import {
   Video, 
   Flag, 
   Trophy, 
-  Award 
+  Award,
+  ArrowRight,
+  Plane
 } from 'lucide-react';
 import { timelineData } from '../data/timeline';
 
@@ -22,72 +24,107 @@ const iconMap = {
   award: Award,
 };
 
-const TimelineItem = ({ item, index, isLast }) => {
+const PhaseCard = ({ item, index, total }) => {
   const Icon = iconMap[item.icon] || Calendar;
-  const isLeft = index % 2 === 0;
 
   return (
-    <div className={`flex items-start gap-4 md:gap-8 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-      {/* Content Card */}
-      <motion.div
-        initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        className={`flex-1 ${isLeft ? 'md:text-right' : 'md:text-left'}`}
-      >
-        <div className={`card ${isLeft ? 'md:ml-auto' : 'md:mr-auto'} max-w-md`}>
-          <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'md:flex-row-reverse' : ''}`}>
-            <div className="w-10 h-10 rounded-lg bg-electric/20 flex items-center justify-center">
-              <Icon className="w-5 h-5 text-electric" />
-            </div>
-            <div className={`flex flex-col ${isLeft ? 'md:items-end' : 'md:items-start'}`}>
-              <span className="text-electric text-sm font-semibold">{item.time}</span>
-              <span className="text-steel text-xs">{item.date}</span>
-            </div>
-          </div>
-          <h3 className="text-lg font-display font-bold text-white mb-2">{item.title}</h3>
-          <p className="text-steel text-sm">{item.description}</p>
-          
-          {/* Event Details (if available) */}
-          {item.events && (
-            <div className={`mt-4 pt-4 border-t border-slate-border ${isLeft ? 'md:text-right' : 'md:text-left'}`}>
-              <ul className="space-y-2">
-                {item.events.map((event, i) => (
-                  <li key={i} className="text-steel-light text-xs flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-electric rounded-full flex-shrink-0" />
-                    {event}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      </motion.div>
+    <div className="flex flex-col items-center flex-1 relative">
+      {/* Connector line (not on first) */}
+      {index > 0 && (
+        <div className="absolute top-8 right-1/2 w-full h-0.5 bg-gradient-to-r from-electric/60 to-electric/20 -z-10 hidden lg:block" />
+      )}
 
-      {/* Timeline Line & Dot (Desktop) */}
-      <div className="hidden md:flex flex-col items-center">
-        <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{ scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="w-4 h-4 rounded-full bg-electric shadow-glow z-10"
-        />
-        {!isLast && (
-          <motion.div
-            initial={{ height: 0 }}
-            whileInView={{ height: '100%' }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-            className="w-0.5 bg-gradient-to-b from-electric to-slate-border flex-1 min-h-[100px]"
-          />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.15 }}
+        className={`w-full rounded-2xl border p-6 transition-all duration-300 ${
+          item.highlight
+            ? 'bg-gradient-to-br from-electric/10 to-cyan-500/5 border-electric/40 shadow-glow'
+            : 'bg-space-200 border-slate-border hover:border-electric/30'
+        }`}
+      >
+        {/* Phase badge + Icon */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+            item.highlight ? 'bg-electric/20' : 'bg-electric/10'
+          }`}>
+            <Icon className={`w-6 h-6 ${item.highlight ? 'text-cyan-300' : 'text-electric'}`} />
+          </div>
+          <div>
+            <span className="text-electric text-xs font-bold uppercase tracking-wider">{item.phase}</span>
+            <h3 className="text-lg font-display font-bold text-white">{item.title}</h3>
+          </div>
+        </div>
+
+        <p className="text-steel text-sm leading-relaxed">{item.description}</p>
+
+        {/* Sub-events list */}
+        {item.events && (
+          <div className="mt-4 pt-4 border-t border-slate-border">
+            <p className="text-white text-xs font-semibold uppercase tracking-wider mb-3">Concurrent Events</p>
+            <ul className="space-y-2">
+              {item.events.map((event, i) => (
+                <li key={i} className="flex items-center gap-2 text-sm">
+                  <Plane className="w-3.5 h-3.5 text-cyan-400 flex-shrink-0" />
+                  <span className="text-steel-light">{event}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
+      </motion.div>
+    </div>
+  );
+};
+
+const MobilePhaseCard = ({ item, index, isLast }) => {
+  const Icon = iconMap[item.icon] || Calendar;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="relative pl-10"
+    >
+      {/* Vertical line */}
+      {!isLast && (
+        <div className="absolute left-[15px] top-12 bottom-0 w-0.5 bg-gradient-to-b from-electric/60 to-slate-border" />
+      )}
+
+      {/* Dot */}
+      <div className={`absolute left-0 top-3 w-8 h-8 rounded-full flex items-center justify-center z-10 ${
+        item.highlight ? 'bg-electric shadow-glow' : 'bg-space-200 border-2 border-electric/50'
+      }`}>
+        <Icon className={`w-4 h-4 ${item.highlight ? 'text-white' : 'text-electric'}`} />
       </div>
 
-      {/* Spacer for alternating layout */}
-      <div className="hidden md:block flex-1" />
-    </div>
+      <div className={`rounded-xl border p-5 mb-6 ${
+        item.highlight
+          ? 'bg-gradient-to-br from-electric/10 to-cyan-500/5 border-electric/40'
+          : 'bg-space-200 border-slate-border'
+      }`}>
+        <span className="text-electric text-xs font-bold uppercase tracking-wider">{item.phase}</span>
+        <h3 className="text-lg font-display font-bold text-white mt-1 mb-2">{item.title}</h3>
+        <p className="text-steel text-sm">{item.description}</p>
+
+        {item.events && (
+          <div className="mt-3 pt-3 border-t border-slate-border">
+            <ul className="space-y-1.5">
+              {item.events.map((event, i) => (
+                <li key={i} className="flex items-center gap-2 text-sm">
+                  <Plane className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+                  <span className="text-steel-light">{event}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+    </motion.div>
   );
 };
 
@@ -97,6 +134,7 @@ const Timeline = () => {
       {/* Background */}
       <div className="absolute inset-0 bg-space-100" />
       <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-electric/5 blur-[150px] rounded-full" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/5 blur-[120px] rounded-full" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -108,75 +146,64 @@ const Timeline = () => {
         >
           <span className="text-electric text-sm font-semibold uppercase tracking-wider">Schedule</span>
           <h2 className="section-heading mt-2">
-            Event <span className="gradient-text">Timeline</span>
+            Event <span className="gradient-text">Day Flow</span>
           </h2>
           <p className="section-subheading">
-            Mark your calendars! Here's everything you need to know about important dates and the event schedule.
+            Here's how the day unfolds — all competitions run concurrently across different venues!
           </p>
         </motion.div>
 
-        {/* Mobile Timeline */}
-        <div className="md:hidden space-y-6">
+        {/* Desktop: Horizontal Phase Flow */}
+        <div className="hidden lg:flex gap-6">
           {timelineData.map((item, index) => (
-            <motion.div
+            <PhaseCard
               key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              item={item}
+              index={index}
+              total={timelineData.length}
+            />
+          ))}
+        </div>
+
+        {/* Horizontal flow arrows (desktop only) */}
+        <div className="hidden lg:flex justify-around mt-6 px-16">
+          {timelineData.slice(0, -1).map((_, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="relative pl-8 border-l-2 border-slate-border"
+              transition={{ delay: 0.5 + index * 0.15 }}
+              className="text-electric/40"
             >
-              <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-electric shadow-glow" />
-              <div className="card">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-electric text-sm font-semibold">{item.time}</span>
-                  <span className="text-steel text-xs">• {item.date}</span>
-                </div>
-                <h3 className="text-lg font-display font-bold text-white mt-1 mb-2">{item.title}</h3>
-                <p className="text-steel text-sm">{item.description}</p>
-                {item.events && (
-                  <ul className="mt-3 pt-3 border-t border-slate-border space-y-1.5">
-                    {item.events.map((event, i) => (
-                      <li key={i} className="text-steel-light text-xs flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-electric rounded-full" />
-                        {event}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
+              <ArrowRight className="w-6 h-6" />
             </motion.div>
           ))}
         </div>
 
-        {/* Desktop Timeline */}
-        <div className="hidden md:block">
+        {/* Mobile: Vertical Stacked */}
+        <div className="lg:hidden">
           {timelineData.map((item, index) => (
-            <TimelineItem 
-              key={item.id} 
-              item={item} 
-              index={index} 
+            <MobilePhaseCard
+              key={item.id}
+              item={item}
+              index={index}
               isLast={index === timelineData.length - 1}
             />
           ))}
         </div>
 
-        {/* Download Calendar CTA */}
+        {/* Info Note */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
-          <p className="text-steel mb-4">Don't miss any important dates!</p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn-secondary inline-flex items-center gap-2"
-          >
-            <Calendar className="w-4 h-4" />
-            Add to Calendar
-          </motion.button>
+          <div className="inline-flex items-center gap-2 bg-space-200 border border-slate-border rounded-full px-6 py-3">
+            <Calendar className="w-4 h-4 text-electric" />
+            <span className="text-steel text-sm">March 27, 2026 &bull; Acharya Institute of Technology, Bangalore</span>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -46,7 +46,7 @@
   }
   
   .gradient-text {
-    @apply text-white; /* Removed generic gradient, keeping it clean white or specific highlight */
+    @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-teal-300 bg-clip-text text-transparent;
   }
   
   .glow-border {

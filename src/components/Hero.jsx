@@ -54,25 +54,26 @@ const Hero = () => {
 
   const CountdownBlock = ({ value, label }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[80px]">
+      <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 min-w-[60px] sm:min-w-[80px]">
         <span className="block text-2xl sm:text-4xl font-display font-bold text-white text-center">
           {String(value).padStart(2, '0')}
         </span>
       </div>
-      <span className="text-xs sm:text-sm text-neutral-500 mt-2 uppercase tracking-wider">{label}</span>
+      <span className="text-xs sm:text-sm text-cyan-300/60 mt-2 uppercase tracking-wider">{label}</span>
     </div>
   );
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Simple Dark Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black" />
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Aerospace Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#020B18] via-[#0B2447] to-[#0E4D64]" />
       
-      {/* Subtle Vignette Effect */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
+      {/* Radial Glow Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(14,116,144,0.18),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(11,36,71,0.6),transparent_60%)]" />
 
-      {/* Static Accent - Subtle top line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent" />
+      {/* Static Accent - Cyan top line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
 
       {/* Removed Floating Drone Animation */}
       <motion.div
@@ -107,10 +108,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-full px-4 py-2 mb-6"
+            className="inline-flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
           >
-            <Rocket className="w-4 h-4 text-white" />
-            <span className="text-sm font-medium text-neutral-300">Aerospace & Aviation Event 2026</span>
+            <Rocket className="w-4 h-4 text-cyan-300" />
+            <span className="text-sm font-medium text-cyan-100/80">Aerospace & Aviation Event 2026</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -121,7 +122,7 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6"
           >
             <span className="block">Welcome to</span>
-            <span className="gradient-text">Xcelerate 2026</span>
+            <span className="gradient-text">AeroXcelerate 2026</span>
           </motion.h1>
 
           {/* Tagline */}
@@ -129,10 +130,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg sm:text-xl text-neutral-400 max-w-2xl mx-auto lg:mx-0 mb-8"
+            className="text-lg sm:text-xl text-cyan-100/60 max-w-2xl mx-auto lg:mx-0 mb-8"
           >
-            India's Premier Student Aerospace Competition featuring Drone Racing, 
-            Aircraft Investigation, Engineering Challenges & Innovation Showcases.
+            India's Premier Student Aerospace Competition featuring Drone Flying, 
+            Egg Parachute, Aircraft Investigation, Aircraft Design & Poster Presentation.
           </motion.p>
 
           {/* Event Details */}
@@ -142,17 +143,17 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 mb-10"
           >
-            <div className="flex items-center gap-2 text-neutral-300">
-              <Calendar className="w-5 h-5 text-neutral-500" />
+            <div className="flex items-center gap-2 text-white/80">
+              <Calendar className="w-5 h-5 text-cyan-400/60" />
               <span className="font-medium">March 27, 2026</span>
             </div>
-            <div className="flex items-center gap-2 text-neutral-300">
-              <MapPin className="w-5 h-5 text-neutral-500" />
+            <div className="flex items-center gap-2 text-white/80">
+              <MapPin className="w-5 h-5 text-cyan-400/60" />
               <span className="font-medium">Bangalore, India</span>
             </div>
-            <div className="flex items-center gap-2 text-neutral-300">
-              <Users className="w-5 h-5 text-neutral-500" />
-              <span className="font-medium">4 Events</span>
+            <div className="flex items-center gap-2 text-white/80">
+              <Users className="w-5 h-5 text-cyan-400/60" />
+              <span className="font-medium">5 Events</span>
             </div>
           </motion.div>
 
@@ -188,7 +189,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <p className="text-neutral-500 text-sm mb-4 uppercase tracking-wider">Event Starts In</p>
+            <p className="text-cyan-300/50 text-sm mb-4 uppercase tracking-wider">Event Starts In</p>
             <div className="flex justify-center lg:justify-start gap-3 sm:gap-4">
               <CountdownBlock value={timeLeft.days} label="Days" />
               <CountdownBlock value={timeLeft.hours} label="Hours" />
@@ -207,7 +208,7 @@ const Hero = () => {
       >
         <button
           onClick={() => scrollToSection('#about')}
-          className="flex flex-col items-center gap-2 text-neutral-600 hover:text-neutral-400 transition-colors"
+          className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors"
         >
           <span className="text-xs uppercase tracking-wider">Scroll</span>
           <ChevronDown className="w-5 h-5" />
