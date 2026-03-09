@@ -206,6 +206,9 @@ const Footer = () => {
             <p className="text-steel text-sm text-center sm:text-left">
               © 2026 AeroXcelerate. Organized by <span className="text-gray-300">Department of Aeronautical Engineering</span>, Acharya Institute of Technology.
             </p>
+            <p className="text-steel text-sm text-center">
+              Website by <a href="https://thebigo.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">The Big O</a>
+            </p>
             <div className="flex items-center gap-6 text-sm text-steel">
               <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
