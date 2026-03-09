@@ -147,7 +147,7 @@ const Timeline = () => {
         >
           <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">Schedule</span>
           <h2 className="section-heading mt-2">
-            Event <span className="gradient-text">Day Flow</span>
+            Event <span className="text-white">Day Flow</span>
           </h2>
           <p className="section-subheading">
             Here's how the day unfolds — all competitions run concurrently across different venues!

@@ -73,7 +73,7 @@ const FAQ = () => {
           className="text-center mb-12"
         >
           <h2 className="section-heading mt-2">
-            Frequently Asked <span className="gradient-text">Questions</span>
+            Frequently Asked <span className="text-white">Questions</span>
           </h2>
         </motion.div>
 

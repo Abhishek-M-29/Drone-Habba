@@ -45,7 +45,7 @@ export const events = [
     icon: Wind,
     tagline: "Design. Drop. Protect the Egg.",
     description: "All required materials to build the parachute will be provided at the venue. Participants must come with a basic idea or concept for their parachute design. During the competition, they will be given a limited amount of time to build the parachute using the provided materials. The goal is to design a parachute system that allows the egg to land safely without breaking when dropped from a height (height will be intimated at the venue).",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1591126992157-8f85b3913a7f?w=800&auto=format&fit=crop&q=80",
     color: "from-gray-400 to-gray-600",
     teamSize: "Max 2 per team",
     eligibility: "All college/university students",

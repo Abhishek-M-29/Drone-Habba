@@ -207,7 +207,7 @@ const About = () => {
             <span className="w-8 h-px bg-gray-600" />About the Event<span className="w-8 h-px bg-gray-600" />
           </span>
           <h2 className="section-heading mt-2 !text-5xl sm:!text-6xl relative">
-            What is <span className="gradient-text">AeroXcelerate</span>?
+            What is <span className="text-white">AeroXcelerate</span>?
           </h2>
           <p className="section-subheading max-w-3xl mx-auto mt-5 text-gray-400/80 leading-relaxed relative">
             Organized by the Department of Aeronautical Engineering, AeroXcelerate provides a platform 

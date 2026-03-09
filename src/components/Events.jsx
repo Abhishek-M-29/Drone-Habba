@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Users, Clock, Award, ChevronRight, X, IndianRupee, Trophy, Sparkles } from 'lucide-react';
 import { events } from '../data/events';
@@ -146,6 +146,11 @@ const EventModal = ({ event, onClose }) => {
   if (!event) return null;
   const Icon = event.icon;
   const num = String(event.id).padStart(2, '0');
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, []);
 
   return (
     <motion.div
@@ -425,7 +430,7 @@ const Events = () => {
         >
           <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">Competitions</span>
           <h2 className="section-heading mt-2">
-            <span className="gradient-text">5 Exciting</span> Events
+            <span className="text-white">5 Exciting</span> Events
           </h2>
           <p className="section-subheading">
             From autonomous drone flying to creative poster presentations, 

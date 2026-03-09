@@ -369,7 +369,7 @@ const Registration = () => {
         >
           <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">Join Us</span>
           <h2 className="section-heading mt-2">
-            <span className="gradient-text">Register</span> Now
+            <span className="text-white">Register</span> Now
           </h2>
           <p className="section-subheading">
             Secure your spot at AeroXcelerate 2026. Fill in your details and select the events you want to participate in.
