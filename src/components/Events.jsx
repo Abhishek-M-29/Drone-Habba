@@ -18,7 +18,7 @@ const FeaturedCard = ({ event, onClick }) => {
       {/* Glow line on hover */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
 
-      <div className="grid lg:grid-cols-2 min-h-[340px]">
+      <div className="grid lg:grid-cols-2 min-h-0 lg:min-h-[340px]">
         {/* Image side */}
         <div className="relative h-64 lg:h-full overflow-hidden">
           <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -34,7 +34,7 @@ const FeaturedCard = ({ event, onClick }) => {
 
         {/* Content side */}
         <div className="relative bg-space-200 p-8 lg:p-10 flex flex-col justify-center">
-          <div className="absolute top-6 right-8 text-[80px] font-display font-black text-white/[0.03] leading-none select-none">
+          <div className="absolute top-6 right-8 text-[50px] sm:text-[80px] font-display font-black text-white/[0.03] leading-none select-none">
             01
           </div>
           <div className="flex items-center gap-3 mb-4">

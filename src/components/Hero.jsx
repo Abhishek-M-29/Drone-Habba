@@ -54,10 +54,10 @@ const Hero = () => {
   };
 
   const CountdownBlock = ({ value, label }) => (
-    <div className="flex flex-col items-center">
-      <div className="relative bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm rounded-2xl p-4 sm:p-5 min-w-[68px] sm:min-w-[90px] group hover:border-white/20 transition-all duration-300">
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent" />
-        <span className="relative block text-3xl sm:text-5xl font-display font-bold text-white text-center tabular-nums">
+    <div className="flex flex-col items-center flex-1 sm:flex-initial">
+      <div className="relative bg-white/[0.04] border border-white/[0.08] backdrop-blur-sm rounded-xl sm:rounded-2xl p-2.5 sm:p-5 w-full sm:min-w-[90px] group hover:border-white/20 transition-all duration-300">
+        <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent" />
+        <span className="relative block text-2xl sm:text-5xl font-display font-bold text-white text-center tabular-nums">
           {String(value).padStart(2, '0')}
         </span>
       </div>
@@ -108,7 +108,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content — 2-col on lg */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 w-full">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 w-full">
         <div className="grid lg:grid-cols-[1fr,420px] xl:grid-cols-[1fr,500px] gap-12 lg:gap-8 items-center">
         <div className="text-center lg:text-left">
           {/* Badge */}
@@ -130,9 +130,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 tracking-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-6 tracking-tight"
           >
-            <span className="block text-gray-400 text-2xl sm:text-3xl md:text-4xl font-medium mb-2 tracking-normal">Welcome to</span>
+            <span className="block text-gray-400 text-xl sm:text-2xl md:text-4xl font-medium mb-2 tracking-normal">Welcome to</span>
             <span className="block">
               Aero<span className="relative inline-block">
                 <span className="gradient-text">Xcelerate</span>
@@ -209,7 +209,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.55 }}
           >
             <p className="text-gray-500 text-xs mb-5 uppercase tracking-[0.25em] font-medium">Event Starts In</p>
-            <div className="flex justify-center lg:justify-start items-start gap-2 sm:gap-3">
+            <div className="flex justify-center lg:justify-start items-start gap-1.5 sm:gap-3 w-full max-w-sm sm:max-w-none mx-auto lg:mx-0">
               <CountdownBlock value={timeLeft.days} label="Days" />
               <CountdownSep />
               <CountdownBlock value={timeLeft.hours} label="Hours" />

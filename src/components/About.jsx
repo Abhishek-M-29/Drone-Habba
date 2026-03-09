@@ -73,7 +73,7 @@ const BentoStatCard = ({ stat, index, className = '', large = false }) => {
           <div className={`bg-white/[0.06] rounded-xl flex items-center justify-center group-hover:bg-white/[0.1] transition-colors ${large ? 'w-16 h-16 mb-6' : 'w-12 h-12 mb-5'}`}>
             <stat.icon className={`text-gray-400 group-hover:text-white transition-colors ${large ? 'w-8 h-8' : 'w-6 h-6'}`} />
           </div>
-          <p className={`font-display font-bold text-white mb-1 tabular-nums ${large ? 'text-6xl sm:text-7xl' : 'text-4xl sm:text-5xl'}`}>
+          <p className={`font-display font-bold text-white mb-1 tabular-nums ${large ? 'text-5xl sm:text-7xl' : 'text-3xl sm:text-5xl'}`}>
             {stat.prefix || ''}{count}{stat.suffix}
           </p>
           <p className={`text-gray-500 ${large ? 'text-base mt-2' : 'text-sm'}`}>{stat.label}</p>
@@ -200,13 +200,13 @@ const About = () => {
           className="text-center mb-20 relative"
         >
           {/* Large watermark text */}
-          <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-[clamp(60px,12vw,160px)] font-display font-bold text-white/[0.015] select-none pointer-events-none leading-none">
+          <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-[clamp(40px,12vw,160px)] font-display font-bold text-white/[0.015] select-none pointer-events-none leading-none">
             AERO
           </span>
           <span className="inline-flex items-center gap-2 text-gray-500 text-xs font-semibold uppercase tracking-[0.25em] mb-4 relative">
             <span className="w-8 h-px bg-gray-600" />About the Event<span className="w-8 h-px bg-gray-600" />
           </span>
-          <h2 className="section-heading mt-2 !text-5xl sm:!text-6xl relative">
+          <h2 className="section-heading mt-2 !text-3xl sm:!text-5xl md:!text-6xl relative">
             What is <span className="text-white">AeroXcelerate</span>?
           </h2>
           <p className="section-subheading max-w-3xl mx-auto mt-5 text-gray-400/80 leading-relaxed relative">
@@ -241,7 +241,7 @@ const About = () => {
           className="relative mb-16"
         >
           {/* Outer decorative frame */}
-          <div className="relative bg-gradient-to-b from-white/[0.03] via-white/[0.015] to-transparent border border-white/[0.06] rounded-3xl p-8 sm:p-12 lg:p-16 overflow-hidden">
+          <div className="relative bg-gradient-to-b from-white/[0.03] via-white/[0.015] to-transparent border border-white/[0.06] rounded-3xl p-5 sm:p-12 lg:p-16 overflow-hidden">
             {/* Corner HUD brackets */}
             <div className="absolute top-4 left-4 w-8 h-8 border-t border-l border-white/[0.12] rounded-tl-lg" />
             <div className="absolute top-4 right-4 w-8 h-8 border-t border-r border-white/[0.12] rounded-tr-lg" />
@@ -330,7 +330,7 @@ const About = () => {
           >
             <span className="text-gray-600 text-[10px] font-semibold uppercase tracking-[0.3em]">By the Numbers</span>
           </motion.div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative auto-rows-[minmax(160px,auto)]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 relative auto-rows-[minmax(130px,auto)] sm:auto-rows-[minmax(160px,auto)]">
             {/* Hero card — Participants */}
             <BentoStatCard stat={stats[0]} index={0} className="col-span-2 row-span-2" large />
             {/* Events */}
@@ -357,7 +357,7 @@ const About = () => {
             <span className="inline-flex items-center gap-2 text-gray-500 text-xs font-semibold uppercase tracking-[0.25em] mb-4">
               <span className="w-8 h-px bg-gray-600" />Hosted By<span className="w-8 h-px bg-gray-600" />
             </span>
-            <h3 className="section-heading !text-4xl sm:!text-5xl mb-3">Hosted By</h3>
+            <h3 className="section-heading !text-3xl sm:!text-4xl md:!text-5xl mb-3">Hosted By</h3>
             <div className="w-20 h-0.5 bg-gradient-to-r from-gray-600 via-white/30 to-gray-600 mx-auto rounded-full" />
           </motion.div>
 

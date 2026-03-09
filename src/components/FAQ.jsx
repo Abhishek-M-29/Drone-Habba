@@ -78,7 +78,7 @@ const FAQ = () => {
         </motion.div>
 
         {/* FAQ Content */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-5 lg:gap-8">
           {/* Left Column */}
           <div className="card">
             {leftColumn.map((item) => (
@@ -113,8 +113,8 @@ const FAQ = () => {
         >
           <div className="card inline-block max-w-xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-8 h-8 text-gray-300" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-gray-300" />
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-display font-semibold text-white mb-1">

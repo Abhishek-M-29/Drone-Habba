@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }} className="flex items-center gap-3 mb-6">
@@ -202,7 +202,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="relative border-t border-slate-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <p className="text-steel text-sm text-center sm:text-left">
               © 2026 AeroXcelerate. Organized by <span className="text-gray-300">Department of Aeronautical Engineering</span>, Acharya Institute of Technology.
             </p>
