@@ -35,6 +35,7 @@ export const events = [
     ],
     awards: ["1st Place - Rs. 30,000/-", "2nd Place - Rs. 20,000/-"],
     registrationFee: "Rs. 1,000/- per team",
+    feeAmount: 1000,
     whatsappLink: "https://chat.whatsapp.com/Iz9x5v5ZIxq8XAHlaZyhFW?mode=gi_t"
   },
   {
@@ -63,6 +64,7 @@ export const events = [
     ],
     awards: ["1st Place - Rs. 3,000/-", "2nd Place - Rs. 2,000/-"],
     registrationFee: "Rs. 300/- per team",
+    feeAmount: 300,
     whatsappLink: "https://chat.whatsapp.com/LgM4SFNccG5GdiuWLAEmg2?mode=gi_t"
   },
   {
@@ -91,6 +93,7 @@ export const events = [
     ],
     awards: ["1st Place - Rs. 3,000/-", "2nd Place - Rs. 2,000/-"],
     registrationFee: "Rs. 300/- per team",
+    feeAmount: 300,
     whatsappLink: "https://chat.whatsapp.com/CBcJkVHIlNIBYpWP9ir8aR?mode=gi_t"
   },
   {
@@ -119,6 +122,7 @@ export const events = [
     ],
     awards: ["1st Place - Rs. 3,000/-", "2nd Place - Rs. 2,000/-"],
     registrationFee: "Rs. 300/- per team",
+    feeAmount: 300,
     whatsappLink: "https://chat.whatsapp.com/L65JjOpTcjo9Z0dsYxPD8Y?mode=gi_t"
   },
   {
@@ -147,6 +151,7 @@ export const events = [
     ],
     awards: ["1st Place - Rs. 3,000/-", "2nd Place - Rs. 2,000/-"],
     registrationFee: "Rs. 400/- (4 members) / Rs. 500/- (5 members)",
+    feeAmount: 500,
     whatsappLink: "https://chat.whatsapp.com/B5sv5litxYPDCVWNI6gYLZ?mode=gi_t"
   }
 ];
