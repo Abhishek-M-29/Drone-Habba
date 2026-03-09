@@ -64,10 +64,6 @@ const BentoStatCard = ({ stat, index, className = '', large = false }) => {
       <div className="relative bg-white/[0.03] border border-white/[0.06] rounded-2xl hover:border-white/15 transition-all duration-300 h-full overflow-hidden">
         {/* Top glow line */}
         <div className="absolute top-0 inset-x-6 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-        {/* Watermark */}
-        <span className={`absolute -top-4 -right-2 font-display font-bold text-white/[0.02] select-none leading-none group-hover:text-white/[0.04] transition-colors ${large ? 'text-[140px]' : 'text-[80px]'}`}>
-          {index + 1}
-        </span>
 
         <div className={`relative flex flex-col items-center justify-center h-full ${large ? 'p-8 sm:p-12' : 'p-6 sm:p-8'}`}>
           <div className={`bg-white/[0.06] rounded-xl flex items-center justify-center group-hover:bg-white/[0.1] transition-colors ${large ? 'w-16 h-16 mb-6' : 'w-12 h-12 mb-5'}`}>

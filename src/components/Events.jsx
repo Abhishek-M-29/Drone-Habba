@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Users, Clock, Award, ChevronRight, X, IndianRupee, Trophy, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Users, Clock, Award, ChevronRight, X, IndianRupee, Trophy, Sparkles } from 'lucide-react';
 import { events } from '../data/events';
 
 /* ── Featured Hero Card (Event 1 — Drone) ── */
@@ -17,6 +17,11 @@ const FeaturedCard = ({ event, onClick }) => {
     >
       {/* Glow line on hover */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+
+      {/* Details arrow hint */}
+      <div className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/[0.06] border border-white/[0.1] flex items-center justify-center group-hover:bg-white/[0.12] group-hover:border-white/20 transition-all">
+        <ArrowUpRight className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+      </div>
 
       <div className="grid lg:grid-cols-2 min-h-0 lg:min-h-[340px]">
         {/* Image side */}
@@ -91,6 +96,11 @@ const EventCard = ({ event, onClick, index }) => {
     >
       {/* Glow line on hover */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
+
+      {/* Details arrow hint */}
+      <div className="absolute top-3 right-3 z-10 w-7 h-7 rounded-full bg-black/50 backdrop-blur-sm border border-white/[0.1] flex items-center justify-center group-hover:bg-white/[0.12] group-hover:border-white/20 transition-all">
+        <ArrowUpRight className="w-3.5 h-3.5 text-gray-400 group-hover:text-white transition-colors" />
+      </div>
 
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
