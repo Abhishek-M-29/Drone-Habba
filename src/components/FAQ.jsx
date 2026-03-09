@@ -13,15 +13,15 @@ const FAQItem = ({ item, isOpen, onClick }) => {
     >
       <button
         onClick={onClick}
-        className="w-full py-5 flex items-start justify-between gap-4 text-left hover:text-electric transition-colors group"
+        className="w-full py-5 flex items-start justify-between gap-4 text-left hover:text-white transition-colors group"
       >
-        <span className={`font-medium ${isOpen ? 'text-electric' : 'text-white group-hover:text-electric'} transition-colors`}>
+        <span className={`font-medium ${isOpen ? 'text-white' : 'text-white group-hover:text-white'} transition-colors`}>
           {item.question}
         </span>
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.2 }}
-          className={`flex-shrink-0 mt-1 ${isOpen ? 'text-electric' : 'text-steel'}`}
+          className={`flex-shrink-0 mt-1 ${isOpen ? 'text-white' : 'text-steel'}`}
         >
           <ChevronDown className="w-5 h-5" />
         </motion.div>
@@ -62,7 +62,7 @@ const FAQ = () => {
     <section id="faq" className="py-20 lg:py-32 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-space-100" />
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-purple-500/5 blur-[120px] rounded-full" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-white/[0.03] blur-[120px] rounded-full" />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -72,13 +72,9 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-electric text-sm font-semibold uppercase tracking-wider">Have Questions?</span>
           <h2 className="section-heading mt-2">
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
-          <p className="section-subheading">
-            Find answers to common questions about AeroXcelerate 2026.
-          </p>
         </motion.div>
 
         {/* FAQ Content */}
@@ -117,8 +113,8 @@ const FAQ = () => {
         >
           <div className="card inline-block max-w-xl mx-auto">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-16 h-16 bg-electric/20 rounded-full flex items-center justify-center flex-shrink-0">
-                <MessageCircle className="w-8 h-8 text-electric" />
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <MessageCircle className="w-8 h-8 text-gray-300" />
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-display font-semibold text-white mb-1">

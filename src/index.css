@@ -10,9 +10,21 @@
   body {
     @apply bg-space text-steel-light antialiased;
   }
+
+  /* Noise texture overlay — subtle grain across entire site */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.35;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+  }
   
   ::selection {
-    @apply bg-electric/30 text-white;
+    @apply bg-white/20 text-white;
   }
 }
 
@@ -23,7 +35,7 @@
   }
   
   .btn-secondary {
-    @apply border border-slate-border text-white hover:border-white hover:bg-white/5
+    @apply border border-gray-700 text-white hover:border-white hover:bg-white/5
            font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
   
@@ -31,10 +43,13 @@
     @apply bg-orange-alert hover:bg-orange-hover text-white font-semibold py-3 px-6 rounded-lg 
            transition-all duration-300 transform hover:-translate-y-0.5;
   }
+  .btn-orange:hover {
+    box-shadow: 0 0 30px rgba(243, 111, 33, 0.3), 0 0 60px rgba(243, 111, 33, 0.1);
+  }
   
   .card {
     @apply bg-space-200 border border-slate-border rounded-xl p-6 
-           transition-all duration-300 hover:border-electric/50;
+           transition-all duration-300 hover:border-gray-600 hover:shadow-card-hover;
   }
   
   .section-heading {
@@ -46,11 +61,31 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-cyan-300 via-blue-400 to-teal-300 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent;
   }
   
   .glow-border {
-    @apply border border-electric/30 shadow-glow;
+    @apply border border-white/20 shadow-glow;
+  }
+
+  /* Grid blueprint background */
+  .grid-blueprint {
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+
+  /* Topographic contour lines */
+  .topo-lines {
+    background-image:
+      radial-gradient(ellipse 800px 200px at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%),
+      radial-gradient(ellipse 600px 150px at 80% 30%, rgba(255,255,255,0.02) 0%, transparent 50%),
+      radial-gradient(ellipse 1000px 300px at 50% 80%, rgba(255,255,255,0.025) 0%, transparent 50%),
+      radial-gradient(ellipse 700px 180px at 30% 20%, rgba(255,255,255,0.015) 0%, transparent 50%),
+      radial-gradient(ellipse 900px 250px at 70% 70%, rgba(255,255,255,0.02) 0%, transparent 50%);
   }
 }
 
@@ -82,9 +117,9 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-electric/50 rounded-full;
+  @apply bg-gray-600/50 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-electric;
+  @apply bg-gray-400;
 }

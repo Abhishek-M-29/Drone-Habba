@@ -15,7 +15,7 @@ export const events = [
     tagline: "Build. Fly. Dominate the Skies.",
     description: "Participants must build and fly a drone autonomously with geofencing capabilities. The drone must follow pre-programmed waypoints without manual control during the mission and stay within a predefined virtual boundary. The maximum altitude that can be attained is 30 metres from the surface, and the drone should be able to hover and hold onto respective positions.",
     image: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&auto=format&fit=crop&q=80",
-    color: "from-blue-500 to-cyan-400",
+    color: "from-gray-300 to-gray-500",
     teamSize: "Max 10 per team",
     eligibility: "All college/university students",
     technicalRequirements: [
@@ -46,7 +46,7 @@ export const events = [
     tagline: "Design. Drop. Protect the Egg.",
     description: "All required materials to build the parachute will be provided at the venue. Participants must come with a basic idea or concept for their parachute design. During the competition, they will be given a limited amount of time to build the parachute using the provided materials. The goal is to design a parachute system that allows the egg to land safely without breaking when dropped from a height (height will be intimated at the venue).",
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
-    color: "from-green-500 to-emerald-400",
+    color: "from-gray-400 to-gray-600",
     teamSize: "Max 2 per team",
     eligibility: "All college/university students",
     technicalRequirements: [
@@ -75,7 +75,7 @@ export const events = [
     tagline: "Analyze. Investigate. Uncover the Truth.",
     description: "Participants will be shown a random video of an aircraft accident or incident. Based on the video, teams must analyze the situation and investigate the possible causes of the accident. The objective is to test the participants' analytical thinking, understanding of aviation principles, and problem-solving skills. Teams will need to observe the video carefully, identify possible technical or operational issues, and present their conclusions about what may have led to the accident.",
     image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&auto=format&fit=crop&q=80",
-    color: "from-amber-500 to-orange-400",
+    color: "from-gray-500 to-gray-700",
     teamSize: "Max 2 per team",
     eligibility: "All college/university students",
     technicalRequirements: [
@@ -104,7 +104,7 @@ export const events = [
     tagline: "Imagine. Design. Engineer the Future.",
     description: "Participants will be given specific parameters related to an aircraft component or part (such as wing, fuselage, tail, or propulsion system). Based on these given requirements, teams must design an aircraft or modify the aircraft configuration accordingly. The objective of this task is to evaluate participants' understanding of aircraft design principles, creativity, and ability to apply engineering concepts to meet the specified parameters.",
     image: "https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=800&auto=format&fit=crop&q=80",
-    color: "from-red-500 to-rose-400",
+    color: "from-gray-300 to-gray-400",
     teamSize: "Max 2 per team",
     eligibility: "All college/university students",
     technicalRequirements: [
@@ -133,7 +133,7 @@ export const events = [
     tagline: "Research. Create. Present Your Vision.",
     description: "Participants are required to prepare a poster on any topic related to aircraft or aviation — including aircraft design, propulsion systems, aerodynamics, avionics, sustainability in aviation, future aircraft concepts, accident analysis, or emerging aerospace technologies. The poster should clearly explain the chosen topic using diagrams, illustrations, charts, and concise technical explanations. During the competition, participants will present their poster to a panel of judges, explaining the concept, methodology, and significance of their topic. They should demonstrate their understanding and answer questions from the judges.",
     image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&auto=format&fit=crop&q=80",
-    color: "from-purple-500 to-violet-400",
+    color: "from-gray-500 to-gray-400",
     teamSize: "4-5 per team",
     eligibility: "All college/university students",
     technicalRequirements: [
@@ -150,7 +150,7 @@ export const events = [
       { name: "Presentation & Explanation", weight: 25 }
     ],
     awards: ["1st Place - Rs. 3,000/-", "2nd Place - Rs. 2,000/-"],
-    registrationFee: "Rs. 400/- (4 members) / Rs. 500/- (5 members)",
+    registrationFee: "Rs. 400/- to Rs. 500/-",
     feeAmount: 500,
     whatsappLink: "https://chat.whatsapp.com/B5sv5litxYPDCVWNI6gYLZ?mode=gi_t"
   }

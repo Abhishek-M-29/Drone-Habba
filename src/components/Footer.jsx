@@ -55,7 +55,7 @@ const Footer = () => {
   return (
     <footer id="contact" className="bg-navy-900 border-t border-slate-border relative overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-electric/5 blur-[100px] rounded-full" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-white/[0.03] blur-[100px] rounded-full" />
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -63,12 +63,12 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }} className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-electric rounded-lg flex items-center justify-center shadow-glow">
-                <Plane className="w-6 h-6 text-white transform -rotate-45" />
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-glow">
+                <Plane className="w-6 h-6 text-black transform -rotate-45" />
               </div>
               <div>
                 <span className="font-display font-bold text-xl text-white">
-                  AeroXcelerate <span className="text-electric">2026</span>
+                  AeroXcelerate <span className="text-gray-400">2026</span>
                 </span>
               </div>
             </a>
@@ -87,7 +87,7 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.9 }}
-                  className="w-10 h-10 bg-slate-card border border-slate-border rounded-lg flex items-center justify-center text-steel hover:text-electric hover:border-electric/50 transition-colors"
+                  className="w-10 h-10 bg-slate-card border border-slate-border rounded-lg flex items-center justify-center text-steel hover:text-white hover:border-gray-500 transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -105,7 +105,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className="text-steel hover:text-electric transition-colors text-sm"
+                    className="text-steel hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -123,7 +123,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className="text-steel hover:text-electric transition-colors text-sm"
+                    className="text-steel hover:text-gray-300 transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -138,10 +138,10 @@ const Footer = () => {
             
             {/* Faculty Coordinator */}
             <div className="mb-4">
-              <p className="text-electric text-xs font-semibold uppercase tracking-wider mb-2">Event Coordinator</p>
+              <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Event Coordinator</p>
               <div className="text-steel text-sm">
                 <p className="text-white font-medium">Tanisha D. Singh</p>
-                <a href="tel:+918073507134" className="flex items-center gap-2 mt-1 hover:text-electric transition-colors">
+                <a href="tel:+918073507134" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">
                   <Phone className="w-4 h-4" />
                   <span>80735 07134</span>
                 </a>
@@ -150,18 +150,18 @@ const Footer = () => {
 
             {/* Student Coordinators */}
             <div className="mb-4">
-              <p className="text-electric text-xs font-semibold uppercase tracking-wider mb-2">Student Coordinators</p>
+              <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Student Coordinators</p>
               <div className="space-y-3">
                 <div className="text-steel text-sm">
                   <p className="text-white font-medium">B S Sanketh</p>
-                  <a href="tel:+919611968997" className="flex items-center gap-2 mt-1 hover:text-electric transition-colors">
+                  <a href="tel:+919611968997" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">
                     <Phone className="w-4 h-4" />
                     <span>96119 68997</span>
                   </a>
                 </div>
                 <div className="text-steel text-sm">
                   <p className="text-white font-medium">Yash Naik</p>
-                  <a href="tel:+919324286177" className="flex items-center gap-2 mt-1 hover:text-electric transition-colors">
+                  <a href="tel:+919324286177" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">
                     <Phone className="w-4 h-4" />
                     <span>93242 86177</span>
                   </a>
@@ -204,11 +204,11 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-steel text-sm text-center sm:text-left">
-              © 2026 AeroXcelerate. Organized by <span className="text-electric">Department of Aeronautical Engineering</span>, Acharya Institute of Technology.
+              © 2026 AeroXcelerate. Organized by <span className="text-gray-300">Department of Aeronautical Engineering</span>, Acharya Institute of Technology.
             </p>
             <div className="flex items-center gap-6 text-sm text-steel">
-              <a href="#" className="hover:text-electric transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-electric transition-colors">Terms of Service</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-gray-300 transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>
@@ -219,10 +219,10 @@ const Footer = () => {
         onClick={scrollToTop}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-24 right-6 w-12 h-12 bg-electric rounded-full flex items-center justify-center shadow-glow hover:shadow-glow-lg transition-all z-40"
+        className="fixed bottom-24 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-glow hover:shadow-glow-lg transition-all z-40"
         aria-label="Back to top"
       >
-        <ArrowUp className="w-5 h-5 text-white" />
+        <ArrowUp className="w-5 h-5 text-black" />
       </motion.button>
     </footer>
   );

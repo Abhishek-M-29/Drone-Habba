@@ -48,7 +48,7 @@ const InputField = ({ icon: Icon, name, label, type = 'text', placeholder, value
         placeholder={placeholder}
         className={`w-full bg-slate-card border ${
           error ? 'border-red-500' : 'border-slate-border'
-        } rounded-lg pl-10 pr-4 py-3 text-white placeholder-steel focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-colors`}
+        } rounded-lg pl-10 pr-4 py-3 text-white placeholder-steel focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors`}
         {...props}
       />
     </div>
@@ -275,13 +275,13 @@ const Registration = () => {
                 isCompleted
                   ? 'bg-green-500 border-green-500 text-white'
                   : isActive
-                    ? 'bg-electric border-electric text-white'
+                    ? 'bg-white border-white text-black'
                     : 'border-slate-border text-steel'
               }`}>
                 {isCompleted ? <CheckCircle className="w-5 h-5" /> : step.num}
               </div>
               <span className={`text-[10px] sm:text-xs mt-2 font-semibold tracking-wide text-center hidden sm:block ${
-                isActive ? 'text-electric' : isCompleted ? 'text-green-400' : 'text-steel'
+                isActive ? 'text-white' : isCompleted ? 'text-green-400' : 'text-steel'
               }`}>
                 {step.label}
               </span>
@@ -367,7 +367,7 @@ const Registration = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-electric text-sm font-semibold uppercase tracking-wider">Join Us</span>
+          <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">Join Us</span>
           <h2 className="section-heading mt-2">
             <span className="gradient-text">Register</span> Now
           </h2>
@@ -397,7 +397,7 @@ const Registration = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <h3 className="text-lg font-display font-semibold text-white mb-6 flex items-center gap-2">
-                    <User className="w-5 h-5 text-electric" />
+                    <User className="w-5 h-5 text-gray-300" />
                     Basic Information
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -442,7 +442,7 @@ const Registration = () => {
                             maxLength={10}
                             className={`w-full bg-slate-card border ${
                               errors.phone ? 'border-red-500' : 'border-slate-border'
-                            } rounded-r-lg pl-10 pr-4 py-3 text-white placeholder-steel focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-colors`}
+                            } rounded-r-lg pl-10 pr-4 py-3 text-white placeholder-steel focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors`}
                           />
                         </div>
                       </div>
@@ -481,7 +481,7 @@ const Registration = () => {
                 >
                   {/* Academic Info */}
                   <h3 className="text-lg font-display font-semibold text-white mb-4 flex items-center gap-2">
-                    <GraduationCap className="w-5 h-5 text-electric" />
+                    <GraduationCap className="w-5 h-5 text-gray-300" />
                     Academic Information
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -510,7 +510,7 @@ const Registration = () => {
                           onChange={handleChange}
                           className={`w-full bg-slate-card border ${
                             errors.course ? 'border-red-500' : 'border-slate-border'
-                          } rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-colors appearance-none cursor-pointer`}
+                          } rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors appearance-none cursor-pointer`}
                         >
                           {courses.map((course) => (
                             <option key={course.value} value={course.value} className="bg-navy-800">
@@ -539,7 +539,7 @@ const Registration = () => {
 
                   {/* Team Info */}
                   <h3 className="text-lg font-display font-semibold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-5 h-5 text-electric" />
+                    <Users className="w-5 h-5 text-gray-300" />
                     Team Information
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -565,7 +565,7 @@ const Registration = () => {
                           name="teamSize"
                           value={formData.teamSize}
                           onChange={handleChange}
-                          className="w-full bg-slate-card border border-slate-border rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-electric focus:ring-1 focus:ring-electric transition-colors appearance-none cursor-pointer"
+                          className="w-full bg-slate-card border border-slate-border rounded-lg pl-10 pr-4 py-3 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors appearance-none cursor-pointer"
                         >
                           {[1,2,3,4,5,6,7,8,9,10].map(num => (
                             <option key={num} value={num} className="bg-navy-800">{num} member{num > 1 ? 's' : ''}</option>
@@ -577,7 +577,7 @@ const Registration = () => {
 
                   {/* Event Selection */}
                   <h3 className="text-lg font-display font-semibold text-white mb-2 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-electric" />
+                    <CheckCircle className="w-5 h-5 text-gray-300" />
                     Select Events *
                   </h3>
                   <p className="text-steel text-sm mb-4">Choose the events you want to participate in:</p>
@@ -590,8 +590,8 @@ const Registration = () => {
                           key={event.id}
                           className={`relative flex items-start gap-3 p-4 rounded-lg border cursor-pointer transition-all ${
                             isSelected
-                              ? 'bg-electric/10 border-electric'
-                              : 'bg-slate-card border-slate-border hover:border-electric/50'
+                              ? 'bg-white/10 border-white'
+                              : 'bg-slate-card border-slate-border hover:border-gray-600'
                           }`}
                         >
                           <input
@@ -603,14 +603,14 @@ const Registration = () => {
                             className="sr-only"
                           />
                           <div className={`w-5 h-5 rounded border flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                            isSelected ? 'bg-electric border-electric' : 'border-slate-border'
+                            isSelected ? 'bg-white border-white' : 'border-slate-border'
                           }`}>
                             {isSelected && <CheckCircle className="w-3 h-3 text-white" />}
                           </div>
                           <div>
                             <span className="text-white font-medium text-sm block">{event.shortTitle}</span>
                             <span className="text-steel text-xs">{event.teamSize}</span>
-                            <span className="text-electric text-xs block mt-0.5">₹{event.feeAmount.toLocaleString('en-IN')}</span>
+                            <span className="text-gray-300 text-xs block mt-0.5">₹{event.feeAmount.toLocaleString('en-IN')}</span>
                           </div>
                         </label>
                       );
@@ -624,9 +624,9 @@ const Registration = () => {
 
                   {/* Running Total */}
                   {formData.selectedEvents.length > 0 && (
-                    <div className="mt-4 p-4 bg-electric/5 border border-electric/20 rounded-lg flex items-center justify-between">
+                    <div className="mt-4 p-4 bg-white/5 border border-white/10 rounded-lg flex items-center justify-between">
                       <span className="text-steel-light text-sm font-medium flex items-center gap-2">
-                        <IndianRupee className="w-4 h-4 text-electric" />
+                        <IndianRupee className="w-4 h-4 text-gray-300" />
                         Total Registration Fee
                       </span>
                       <span className="text-white text-xl font-bold font-display">
@@ -671,7 +671,7 @@ const Registration = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <h3 className="text-lg font-display font-semibold text-white mb-6 flex items-center gap-2">
-                    <CreditCard className="w-5 h-5 text-electric" />
+                    <CreditCard className="w-5 h-5 text-gray-300" />
                     Payment Verification
                   </h3>
 
@@ -690,7 +690,7 @@ const Registration = () => {
                       })}
                       <div className="border-t border-slate-border pt-2 mt-2 flex justify-between">
                         <span className="text-white font-bold">Total</span>
-                        <span className="text-electric font-bold text-lg">₹{totalFee.toLocaleString('en-IN')}</span>
+                        <span className="text-white font-bold text-lg">₹{totalFee.toLocaleString('en-IN')}</span>
                       </div>
                     </div>
                   </div>
@@ -745,7 +745,7 @@ const Registration = () => {
                         className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-colors ${
                           errors.screenshot 
                             ? 'border-red-500 bg-red-500/5' 
-                            : 'border-slate-border hover:border-electric/50 bg-slate-card/50'
+                            : 'border-slate-border hover:border-gray-600 bg-slate-card/50'
                         }`}
                       >
                         <Upload className="w-8 h-8 text-steel mx-auto mb-3" />

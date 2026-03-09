@@ -1,9 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Eligibility from './components/Eligibility';
 import Events from './components/Events';
-import Timeline from './components/Timeline';
 import Registration from './components/Registration';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -11,16 +9,17 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="relative">
+      {/* Global Grid Blueprint Overlay */}
+      <div className="fixed inset-0 grid-blueprint pointer-events-none z-0" />
+
       {/* Navigation */}
       <Navbar />
       
       {/* Main Content */}
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
-        <Eligibility />
         <Events />
-        <Timeline />
         <Registration />
         <FAQ />
       </main>

@@ -6,7 +6,6 @@ const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Events', href: '#events' },
-  { name: 'Timeline', href: '#timeline' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Contact', href: '#contact' },
 ];
@@ -61,7 +60,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-navy-900/95 backdrop-blur-md shadow-lg border-b border-slate-border/50' 
+          ? 'bg-navy-900/95 backdrop-blur-md shadow-lg border-b border-gray-800/50' 
           : 'bg-transparent'
       }`}
     >
@@ -75,14 +74,14 @@ const Navbar = () => {
             whileHover={{ scale: 1.02 }}
           >
             <div className="relative">
-              <div className="w-10 h-10 bg-electric rounded-lg flex items-center justify-center shadow-glow group-hover:shadow-glow-lg transition-all">
-                <Plane className="w-6 h-6 text-white transform -rotate-45" />
+              <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-glow group-hover:shadow-glow-lg transition-all">
+                <Plane className="w-6 h-6 text-black transform -rotate-45" />
               </div>
-              <div className="absolute -inset-1 bg-electric/20 rounded-lg blur-sm group-hover:bg-electric/30 transition-all -z-10" />
+              <div className="absolute -inset-1 bg-white/15 rounded-lg blur-sm group-hover:bg-white/25 transition-all -z-10" />
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-xl text-white">
-                AeroXcelerate <span className="text-electric">2026</span>
+                AeroXcelerate <span className="text-gray-400">2026</span>
               </span>
             </div>
           </motion.a>
@@ -96,15 +95,15 @@ const Navbar = () => {
                 onClick={(e) => scrollToSection(e, link.href)}
                 className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
                   activeSection === link.href.slice(1)
-                    ? 'text-electric'
-                    : 'text-steel-light hover:text-white'
+                    ? 'text-white'
+                    : 'text-steel hover:text-white'
                 }`}
               >
                 {link.name}
                 {activeSection === link.href.slice(1) && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute inset-0 bg-electric/10 rounded-lg -z-10"
+                    className="absolute inset-0 bg-white/10 rounded-lg -z-10"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
@@ -149,7 +148,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-navy-900/98 backdrop-blur-md border-b border-slate-border"
+            className="md:hidden bg-navy-900/98 backdrop-blur-md border-b border-gray-800"
           >
             <div className="px-4 py-4 space-y-2">
               {navLinks.map((link, index) => (
@@ -162,8 +161,8 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                   className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
                     activeSection === link.href.slice(1)
-                      ? 'bg-electric/10 text-electric'
-                      : 'text-steel-light hover:bg-slate-card hover:text-white'
+                      ? 'bg-white/10 text-white'
+                      : 'text-steel hover:bg-white/5 hover:text-white'
                   }`}
                 >
                   {link.name}
