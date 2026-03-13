@@ -136,22 +136,17 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-semibold text-white mb-4">Contact Us</h3>
             
-            {/* Faculty Coordinator */}
-            <div className="mb-4">
-              <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Event Coordinator</p>
-              <div className="text-steel text-sm">
-                <p className="text-white font-medium">Tanisha D. Singh</p>
-                <a href="tel:+918073507134" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">
-                  <Phone className="w-4 h-4" />
-                  <span>80735 07134</span>
-                </a>
-              </div>
-            </div>
-
             {/* Student Coordinators */}
             <div className="mb-4">
               <p className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-2">Student Coordinators</p>
               <div className="space-y-3">
+                <div className="text-steel text-sm">
+                  <p className="text-white font-medium">Tanisha D. Singh</p>
+                  <a href="tel:+918073507134" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">
+                    <Phone className="w-4 h-4" />
+                    <span>80735 07134</span>
+                  </a>
+                </div>
                 <div className="text-steel text-sm">
                   <p className="text-white font-medium">B S Sanketh</p>
                   <a href="tel:+919611968997" className="flex items-center gap-2 mt-1 hover:text-gray-300 transition-colors">

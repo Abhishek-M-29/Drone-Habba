@@ -152,7 +152,7 @@ const Hero = () => {
             className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10 leading-relaxed"
           >
             India's premier student aerospace competition — Drone Flying, 
-            Egg Parachute, Aircraft Investigation, Design & Poster Presentation.
+            Egg Parachute, Aircraft Accident Investigation, Design & Poster Presentation.
           </motion.p>
 
           {/* Event Details — pill style */}
