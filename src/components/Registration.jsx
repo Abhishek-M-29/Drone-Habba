@@ -235,6 +235,15 @@ const Registration = () => {
         }
       });
 
+      console.group('Registration Submission');
+      console.log('Target URL:', import.meta.env.VITE_GOOGLE_SCRIPT_URL);
+      console.log('Payload Data:', { ...payload, screenshot: '[BASE64_STRING_HIDDEN]' });
+      console.groupEnd();
+
+      if (!import.meta.env.VITE_GOOGLE_SCRIPT_URL) {
+        throw new Error("VITE_GOOGLE_SCRIPT_URL is undefined! Check your .env file or hosting settings.");
+      }
+
       await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
