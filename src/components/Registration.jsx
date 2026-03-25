@@ -225,13 +225,25 @@ const Registration = () => {
         screenshotMime: screenshot.type,
       };
 
+      // Convert payload to URLSearchParams directly as Apps Script handles it much better natively
+      const formBody = new URLSearchParams();
+      Object.keys(payload).forEach(key => {
+        if (typeof payload[key] === 'object') {
+          formBody.append(key, JSON.stringify(payload[key]));
+        } else {
+          formBody.append(key, payload[key]);
+        }
+      });
+
       await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        body: JSON.stringify(payload),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: formBody.toString(),
       });
 
-      // With no-cors we can't read the response, but the request IS sent
       setIsSuccess(true);
     } catch (err) {
       console.error('Registration error:', err);
